@@ -1,0 +1,113 @@
+Scripts - Tools
+
+Below you will find the current version of any code I have produced or talked about on my blog / podcasts.
+
+----------------------------------
+
+General Tools
+
+----------------------------------
+
+sampler.java
+
+A simple script to select random samples from a set of hosts broken up by baseline for security testing. (Updated - Jan 14, 2011)
+
+scanalizer.java
+
+A script to analyze what hosts have been tested out of an inventory and at what address the host was scanned on. (Updated - April 14, 2009)
+
+
+Lumension (Patchlink)
+
+----------------------------------
+
+XMLPatchlinkReader.java
+
+A script to merge multiple Lumension XML report files into a sheet sorted unique by vulnerability. (Updated - Aug 12, 2011)
+
+
+NMap
+
+----------------------------------
+
+XMLNMAPReader.java
+
+This script will import multiple reports output from nmap with the -O -oX flags and output a flat table for use in Excel or viewable in HTML (Updated - Apr 19, 2011)
+
+
+Nessus (.nessus v2 Tools)
+
+----------------------------------
+
+CoverageValidate.java (APLPHA 0.1)
+
+This script will import an inventory and check a group of scans for missed hosts, extra hosts, and hosts that failed authentication when scanned. (some of the logic is missing at this time for rescan validation) (Updated - Feb 16, 2011)
+
+--- CoverageValidate_NoLiveHostPlug.java (APLPHA 0.1.1a)
+
+This script will import an inventory and check a group of scans for missed hosts, extra hosts, and hosts that failed authentication when scanned. This version had a modification that lowers the accuracy but allows for scanning with out ‘Log Live Hosts in the Report’ turned on. (Updated - May 15, 2011)
+
+--- CoverageValidate_WithIP2MAC.java (APLPHA 0.1.1b)
+
+This script will import an inventory and check a group of scans for missed hosts, extra hosts, and hosts that failed authentication when scanned. This version has a modification that adds a CSV list of MAC Address, IP Address for Dynamic DHCP networks. (Updated - May 15, 2011)
+
+XMLVulnOT.java (BETA 0.2)
+
+A simple script to display the results of pluginIDs in multiple Nessus scans overtime. NOTE: This is beta - I have only worked on this a total of 4 hours. (Updated - Jan 26, 2011)
+
+--- XMLVulnOTAuthOnly.java (BETA 0.2.1a)
+
+A simple script to display the results of auth failed pluginIDs in multiple Nessus scans overtime. Used for validating authenticated scan coverage. (Updated - June 18, 2011)
+
+XMLTable.java
+
+A script to merge multiple .nessus files into a reporting sample sorted unique by vulnerability. (Updated - Jan 11, 2011)
+
+--- XMLTable_DYNDHCP.java
+
+A script to merge multiple .nessus files into a reporting sample sorted unique by vulnerability. In addition this script tries to get detailed host info rather than IP (FQDN, MAC, then IP).             (Updated - June 19, 2011)
+
+XMLTableStats.java
+
+A script to merge multiple .nessus files into a reporting sample sorted unique by vulnerability. Additionally, this version provides columns for a sort to define fix priority. (Updated - Jan 28, 2012)
+
+XMLCompTable.java
+
+A script to merge multiple .nessus compliance scan results sets into a results x (hosts), y (tests) chart. (Updated - Dec 10, 2010)
+
+--- XMLCompTableTranspose.java
+
+A script to merge multiple .nessus compliance scan results sets into a results x (tests), y (hosts) chart. (Updated - Oct 28, 2011)
+
+XMLValidate.java *For Nessus 4.4 and below*
+
+A simple command line tool to validate a .nessus file for artifact compliance. This code will check if a plugin ID was scanned for, found on a host, and what was scanned. Note that this code will not work with Nessus 5.0+ (Updated - Nov 28, 2010)
+
+XMLValidate.java *For Nessus 5.0 + *
+
+A simple command line tool to validate a .nessus file for artifact compliance. This code will check if a plugin ID was scanned for, found on a host, and what was scanned. (Updated - Feb 22, 2012)
+
+--- XMLValidate_wPlugOut.java *For Nessus 4.4 and below*
+
+A simple command line tool to validate a .nessus file for artifact compliance. This code will check if a plugin ID was scanned for, found on a host, and what was scanned. In addition, this version of the code will pull the Plugin Output for each host, used in detailed analysis of the vulnerability. (Updated - March 24, 2011)
+
+XMLVulnStats.java
+
+A script to provide statistics on the vulnerabilities found in one or many .nessus files. Additionally this script tries to quantify worst host order and average risk posture of a system. (Updated - Jan 28, 2012)
+
+--- XMLVulnStatsV2.java
+
+A script to provide statistics on the vulnerabilities found in one or many .nessus files. Additionally this script tries to quantify worst host order and average risk posture of a system. Additionally V2 adds in additional columns for the host data (FQDN, OS, Mac, Scan Start) (Updated - Feb 22, 2012)
+
+--- XMLVulnStatsV3.java
+
+A script to provide statistics on the vulnerabilities found in one or many .nessus files. Additionally this script tries to quantify worst host order and average risk posture of a system. Additionally V3 adds in additional columns for the host data, failed authentication analysis and summer scan data (Updated - March 30, 2012)
+
+
+Nessus (.nbe Tools)
+
+----------------------------------
+
+VulnTable3.java
+
+A script to merge multiple .nbe files into a reporting sample sorted unique by vulnerability. Make sure to look over the Pre-Parser commands to use this file in the Blog entry. This also works well with Nessus Security Center output as thus far .Nessus v2 is not supported. (Updated - Jun 25, 2011)
